@@ -8,7 +8,7 @@ User = get_user_model()
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):
-    """Serializer for the users object"""
+    """Serializer for the user register"""
 
     class Meta:
         model = get_user_model()
@@ -41,6 +41,8 @@ class UserRegisterSerializer(serializers.ModelSerializer):
 
 
 class UserUpdateSerializer(ModelSerializer):
+    """Serializer for the user update"""
+
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username', 'email']
@@ -63,6 +65,8 @@ class UserUpdateSerializer(ModelSerializer):
 
 
 class PasswordChangeSerializer(serializers.Serializer):
+    """Serializer for the user password change"""
+
     old_password = serializers.CharField(max_length=128, required=True)
     new_password = serializers.CharField(max_length=128, required=True)
 
@@ -82,6 +86,8 @@ class PasswordChangeSerializer(serializers.Serializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
+    """Serializer for the users objects"""
+
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username', 'email', 'is_active']
