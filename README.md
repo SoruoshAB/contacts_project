@@ -1,6 +1,6 @@
 # contacts_project
 
-# INSTALLATION
+### INSTALLATION
 
 Install the dependencies and devDependencies and start the server.
 
